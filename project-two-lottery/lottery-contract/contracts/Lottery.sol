@@ -13,7 +13,7 @@ contract Lottery {
         players.push(msg.sender);
     }
 
-    function randow() private view returns (uint256) {
+    function random() private view returns (uint256) {
         return uint256(keccak256(block.difficulty, now, players));
     }
 
